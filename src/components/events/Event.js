@@ -31,7 +31,7 @@ export default function Event({ eventData }) {
     (function showNotification() {
 
         const minutesToNextEvent = hoursOffset * 60 + minutesOffset;
-        const notificationWindow = eventData.notification?.minutes ?? 5;
+        const notificationWindow = eventData.notification?.minutes ?? 10;
 
         const shouldNotify = isSubscribed
             && minutesToNextEvent <= notificationWindow
